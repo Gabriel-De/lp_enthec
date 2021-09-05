@@ -1,0 +1,43 @@
+<!-- <p> {{character | json}}</p>
+
+<ul>
+    <li *ngFor="let cha of character">
+        {{cha.character}}
+    </li>
+</ul>
+
+<h1>{{character[0].character}}</h1>
+<img src="{{character[0].image}}" alt=""> -->
+
+<div class="reviews-section sec-padding" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2>our<span> team</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="review-item" *ngIf="character">
+                <h3>{{character[0].character}}</h3>
+               <img src="{{character[0].image}}" alt=""> 
+               <p> <span>"</span> {{character[0].quote}}? {{character[1].quote}} {{character[14].quote}}<span>"</span></p>
+            </div>
+            <div class="review-item" *ngIf="character">
+                <h3>{{character[2].character}}</h3>
+                <img src="{{character[2].image}}" alt=""> 
+                <p> <span>"</span> {{character[2].quote}} <span>"</span> </p>
+             </div>
+             <div class="review-item" *ngIf="character">
+                <h3>{{character[5].character}}</h3>
+                <img src="{{character[5].image}}" alt=""> 
+                <p> <span>"</span> {{character[5].quote}} <span>"</span> </p>
+             </div>
+             <div class="review-item" *ngIf="character">
+                <h3>{{character[9].character}}</h3>
+                <img src="{{character[9].image}}" alt=""> 
+                <p> <span>"</span> {{character[9].quote}} <span>"</span> </p>
+             </div>
+             
+        </div>
+    </div>
+</div>

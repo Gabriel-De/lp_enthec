@@ -1,0 +1,36 @@
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-item footer-about">
+                <h2>about us</h2>
+                <p>Planet Express, Inc. is the delivery compаny started by Professor Hubert J. Farnsworth to help fund his research and employs a range of individuals to help deliver packages to clients.</p>
+            </div>
+            <div class="footer-item footer-quick-links">
+                <h2>see also</h2>
+                <ul>
+                    <li><a href="https://futurama.fandom.com/wiki/Planet_Express_Building" target="_blank">Planet Express building</a></li>
+                    <li><a href="https://futurama.fandom.com/wiki/Planet_Express_Ship" target="_blank">Planet Express ship</a></li>
+                    <li><a href="https://futurama.fandom.com/wiki/Planet_Express_Crew" target="_blank">Planet Express crew</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="footer-item footer-contact">
+                <h2>contact us</h2>
+                <p>Phone: 555 555 555</p>
+                <p>Location: New New York (Headquarters)</p>
+                <p>Email: HubertJ.Farnsworth.com</p>
+            </div>
+            <div class="footer-item footer-newsletter" id="newsletter">
+                <h2>newsletter</h2>
+                <div class="form">
+                    <div class="input-group">
+                        <input  type="email" [formControl]="emailCtrl" placeholder="Your Email" class="form-control">
+                        <button type="button" [disabled]="emailCtrl.invalid" (click)="getEmail($event)" (click)="showModal()" class="btn btn-1">subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

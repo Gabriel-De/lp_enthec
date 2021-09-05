@@ -1,0 +1,37 @@
+
+<div class="contact-section sec-padding" id="precio">
+    <div class="container h-100">
+        <div class="row">
+            <div class="section-title">
+                <!-- <h2>Calculate your shipment</h2> -->
+                <h2><span>Calculate your shipment</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-form">
+                <div class="form">
+                    <div class="input-group">
+                        <label>Boxes</label>
+                        <input [(ngModel)]="cantidadone" type="number" placeholder="Box" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>Weight (Kg)</label>
+                        <input [(ngModel)]="cantidadtwo" type="number" placeholder="Box1" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <label>Price Kg</label>
+                        <input type="number" placeholder="12 €" class="form-control" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label>Total:</label>
+                        <textarea placeholder="message" class="form-control" readonly>{{resultado.toFixed(2)}} €</textarea>
+                    </div>
+                    <button (click)="multiplicacion()" class="btn btn-1">calculate</button>
+                </div>
+            </div>
+            <div class="contact-img">
+                <img src="../../../assets/img/price.png" alt="">
+            </div>
+        </div>
+    </div>
+</div> 
