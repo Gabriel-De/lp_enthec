@@ -38,7 +38,7 @@ export class FooterComponent implements OnInit {
         width: 600,
         title: 'Bienvenido!',
         text: this.emailCtrl.value,
-        imageUrl: '../../../assets/img/applause.png',
+        imageUrl: 'assets/img/applause.png',
         imageWidth: 200,
         imageHeight: 200,
         background: '#24292d',
