@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import * as countdown from 'countdown';
+import { interval } from 'rxjs';
 import { isString } from 'util';
+
 
 interface Time{
   hours: number,
@@ -15,35 +17,36 @@ interface Time{
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent implements OnInit {
-  time : Time = null; 
-  timerId : number = null;
+  @Input() date : any | string;
 
-  @Input() date : Date | string;
+  OnChanges: any;
+ 
+  time: any = null; 
+  timerId: any = null;
+
 
   constructor() { }
 
+  
+
   ngOnInit(): void {
-    
-
-
-
     if(isString(this.date)){
       this.date = new Date(this.date);
     }
 
     this.timerId = countdown(this.date,(ts)=>{
       this.time = ts;
-    }, countdown.DAYS |countdown.HOURS | countdown.MINUTES | countdown.SECONDS)
-
-
+    }, countdown.DAYS |countdown.HOURS | countdown.MINUTES | countdown.SECONDS);
   }
-
-  ngOnDestroy(){
-    if(this.timerId){
+  ngDoCheck(){
+    
+    if (this.time.value >= 0){
       clearInterval(this.timerId);
+      this.time.days = 0;
+      this.time.seconds = 0;
+      this.time.minutes = 0;
+      this.time.hours = 0;
     }
   }
-
-  
 
 }
